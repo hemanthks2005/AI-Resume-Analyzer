@@ -7,6 +7,8 @@ A modern AI-powered Resume Analyzer built using Flask and Python that helps job 
 Live Application : https://ai-resume-analyzer-bz2v.onrender.com
 
 GitHub Repository: https://github.com/hemanthks2005/AI-Resume-Analyzer
+Live Demo: https://ai-resume-analyzer-bz2v.onrender.com
+
 
 ## ✨ Features
 

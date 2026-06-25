@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upload Success</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+}
+
+.container{
+    width:500px;
+    text-align:center;
+    padding:40px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.success{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+h1{
+    margin-bottom:15px;
+}
+
+p{
+    color:#cbd5e1;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#3b82f6;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#2563eb;
+}
+
+.filename{
+    color:#60a5fa;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="success">✅</div>
+
+    <h1>Resume Uploaded Successfully</h1>
+
+    <p>
+        File Uploaded:
+        <span class="filename">{{ filename }}</span>
+    </p>
+
+    <a href="/" class="btn">
+        Upload Another Resume
+    </a>
+
+</div>
+
+</body>
+</html>

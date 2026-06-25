@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Resume Analyzer</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+}
+
+/* Navbar */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 80px;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#60a5fa;
+}
+
+/* Hero Section */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px;
+    min-height:80vh;
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    color:#cbd5e1;
+    font-size:20px;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+.btn{
+    padding:15px 35px;
+    border:none;
+    border-radius:12px;
+    background:#3b82f6;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#2563eb;
+    transform:translateY(-3px);
+}
+
+/* Hero Card */
+
+.hero-card{
+    width:350px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border-radius:25px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.hero-card h2{
+    margin-bottom:20px;
+}
+
+.hero-card p{
+    color:#cbd5e1;
+}
+
+/* Features */
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.features{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    padding:0 50px 50px;
+}
+
+.card{
+    width:280px;
+    background:rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 30px rgba(59,130,246,0.4);
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#cbd5e1;
+}
+
+/* Stats */
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:80px;
+    flex-wrap:wrap;
+    margin:60px 0;
+}
+
+.stat{
+    text-align:center;
+}
+
+.stat h2{
+    font-size:50px;
+    color:#60a5fa;
+}
+
+.stat p{
+    color:#cbd5e1;
+}
+
+/* Upload Section */
+
+.upload-section{
+    text-align:center;
+    padding:60px;
+}
+
+.upload-box{
+    width:600px;
+    max-width:90%;
+    margin:auto;
+    border:2px dashed #60a5fa;
+    border-radius:20px;
+    padding:50px;
+    background:rgba(255,255,255,0.05);
+}
+
+.upload-box h3{
+    margin-bottom:15px;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#94a3b8;
+}
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    gap:40px;
+}
+
+.hero-text h1{
+    font-size:40px;
+}
+
+.navbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    border-radius:15px;
+    margin-bottom:30px;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:18px;
+}
+
+.nav-links a:hover{
+    color:#60a5fa;
+}
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    padding:15px 35px;
+    border:none;
+    border-radius:12px;
+    background:#3b82f6;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+    
+<nav class="navbar">
+    <div class="logo">
+        🚀 AI Resume Analyzer
+    </div>
+    
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="#upload-section">Upload Resume</a>
+        <a href="/history">History</a>
+    </div>
+</nav>
+
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>Analyze Your Resume With AI</h1>
+
+        <p>
+            Get ATS scores, skill gap analysis,
+            and AI-powered suggestions to improve
+            your resume and increase your chances
+            of getting shortlisted.
+        </p>
+
+        <a href="#upload-section" class="btn">
+            Get Started
+        </a>
+    </div>
+
+    <div class="hero-card">
+
+        <h2>🤖 AI Assistant</h2>
+
+        <p>
+            Upload your resume and receive
+            intelligent feedback instantly.
+        </p>
+
+    </div>
+
+</section>
+
+<h2 class="section-title">✨ Features</h2>
+
+<section class="features">
+
+    <div class="card">
+        <h3>📄 Resume Parsing</h3>
+        <p>
+            Automatically extract information
+            from resumes.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🎯 ATS Score</h3>
+        <p>
+            Check how well your resume matches
+            job requirements.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🤖 AI Suggestions</h3>
+        <p>
+            Get personalized recommendations
+            for improvement.
+        </p>
+    </div>
+
+</section>
+
+<section class="stats">
+
+    <div class="stat">
+        <h2>95%</h2>
+        <p>ATS Accuracy</p>
+    </div>
+
+    <div class="stat">
+        <h2>500+</h2>
+        <p>Resumes Tested</p>
+    </div>
+
+    <div class="stat">
+        <h2>50+</h2>
+        <p>Skills Tracked</p>
+    </div>
+
+</section>
+
+<section class="upload-section" id="upload-section">
+
+    <h2 class="section-title">📤 Upload Resume</h2>
+
+    <div class="upload-box">
+
+        <h3>📄 Upload Your Resume</h3>
+    
+        <p>Select a PDF resume for analysis</p>
+    
+        <br>
+    
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+    
+            <textarea
+                name="job_description"
+                rows="8"
+                style="
+                width:100%;
+                padding:15px;
+                border-radius:10px;
+                margin-bottom:20px;"
+                placeholder="Paste Job Description Here..."
+                required></textarea>
+    
+            <input type="file" name="resume" required>
+    
+            <br><br>
+    
+            <button type="submit" class="btn">
+                Analyze Resume
+            </button>
+    
+        </form>
+    
+    </div>
+</section>
+
+<footer>
+    © 2026 AI Resume Analyzer | Built with Flask & Python
+</footer>
+
+</body>
+</html>
